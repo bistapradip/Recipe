@@ -5,6 +5,9 @@ exclude =
     settings.py,
     __pycache__,
     manage.py,
-    migrations
+    migrations,
 
 ignore = E501
+
+
+
