@@ -6,4 +6,5 @@ exclude =
     __pycache__,
     manage.py,
     migrations
+
 ignore = E501
