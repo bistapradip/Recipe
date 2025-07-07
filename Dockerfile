@@ -13,11 +13,11 @@ ARG DEV=false
 
 RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
-    apk add --update --no-cache postgressql-client && \
+    apk add --update --no-cache postgresql-client && \
     apk add --update --no-cache --virtual .tmp-build-deps \
-        build-base postgressql-dev musl-dev && \
+        build-base postgresql-dev musl-dev && \
     /py/bin/pip install -r /tmp/requirements.txt && \
-    if [$DEV = 'true']; \
+    if [$DEV = 'true' ]; \
         then /py/bin/pip install -r requirements.dev.txt ; \
     fi && \
     rm -rf /tmp && \
